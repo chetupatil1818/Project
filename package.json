@@ -1,0 +1,23 @@
+{
+  "name": "agriculture-portal",
+  "version": "1.0.0",
+  "description": "An agriculture portal for farmers with AI-based crop prediction and multilingual support",
+  "main": "backend/app.js",
+  "scripts": {
+    "start": "node backend/app.js",
+    "server": "nodemon backend/app.js",
+    "client": "cd frontend && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "train-model": "python backend/scripts/train_crop_model.py",
+    "install-express": "npm install express --save",
+    "install-all": "npm install && cd frontend && npm install"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
